@@ -3,7 +3,7 @@ import {doAjaxRequest} from "../helpers";
 
 export default function Notify() {
   const [error, setError] = useState(null);
-  const url = "http://35.201.2.209:8000/notifyX";
+  const url = "http://35.201.2.209:8000/notify";
 
   const onClick = () => {
     setError(null);
