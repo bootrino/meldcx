@@ -36,8 +36,17 @@ const Devices = () => {
   /*
   HOW ANIMATION OF CIRCLES WORKS:
 
-  this took longer than I wanted it to because there's many ways of approaching the problem of
+  This took longer than I wanted it to because there's many ways of approaching the problem of
   displaying animated circles orbiting a number.
+
+  This is the sort of problem where if you know the optimum solution then you can do it many times faster.
+
+  However, not having ever done this before I don't know the optimum solution offhand.
+
+  So I researched examples how how other people have done similar things opn codepen and also on StackOverflow.
+
+  I'm pretty sure there would be several easier ways to do it but I had to commit to a strategy and get
+  a working result rather then spend more time researching for a better approach.
 
   I started with the approach of creating one DIV for each circle, with the circle displayed in the corner
   of the DIV.
