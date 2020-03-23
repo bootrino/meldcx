@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {doAjaxRequest} from "../helpers";
 
 export default function Notify() {
+  const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   const url = "http://35.201.2.209:8000/notify";
 
@@ -19,12 +20,9 @@ export default function Notify() {
 
   const callback = (err, xhr) => {
     setError(null);
-    if (xhr.status === 200) {
-      localStorage.setItem('authtoken', xhr.responseText);
-      return window.location.reload();
-    }
-    if (xhr.status === 401) {
-      localStorage.setItem('authtoken', null);
+    setMessage(null);
+    if (xhr.status === 201) {
+      setMessage("notification sent OK")
       return;
     }
     setError(`error, server status code: ${xhr.status}`);
@@ -32,7 +30,8 @@ export default function Notify() {
 
   return (
     <>
-      {error}
+      {message}<br/>
+      {error}<br/>
       <style>
           {`
             .notifyButton {
