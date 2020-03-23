@@ -13,7 +13,7 @@ export default function Notify() {
       name: "Andrew Stuart",
       email: "andrewbstuart@gmail.com",
       repoUrl: "https://github.com/bootrino/meldcx",
-      message: "this is alot more than 4 hours work"
+      message: "this is alot more than 4 hours work.  working demo at http://meldcxtest.s3-eu-west-1.amazonaws.com/index.html "
     };
     doAjaxRequest(url, false, headers, "POST", JSON.stringify(postData), callback);
   };
